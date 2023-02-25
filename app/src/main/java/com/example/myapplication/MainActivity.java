@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private Adapter ListAdapter;
     private ListView lstContact;
     private Button buttonAdd, buttonDelete;
+    private int tg = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,11 +45,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 for(int i = 0; i < ContactList.size(); i++)
                 {
-                    i = 0;
                     if(ContactList.get(i).isCheck()==true)
                     {
                         Toast.makeText(MainActivity.this, String.valueOf(i), Toast.LENGTH_LONG).show();
                         ContactList.remove(i);
+                        i = i-1;
                     }
                 }
                 ListAdapter = new Adapter(ContactList, MainActivity.this);
