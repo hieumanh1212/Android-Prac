@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ID_SORTTANG"
+        android:title="Sort up" />
+    <item
+        android:id="@+id/ID_SORTGIAM"
+        android:title="Sort down" />
+</menu>

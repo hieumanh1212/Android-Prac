@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/ID_MA"
+        android:layout_width="357dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="ID"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ID_ANH"
+        android:layout_width="149dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ID_MA"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <EditText
+        android:id="@+id/ID_EDITHOTEN"
+        android:layout_width="351dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:hint="Fullname"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ID_ANH" />
+
+    <EditText
+        android:id="@+id/ID_EDITPHONE"
+        android:layout_width="349dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Phone"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ID_EDITHOTEN" />
+
+    <Button
+        android:id="@+id/ID_BUTTONTHEM"
+        android:layout_width="130dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="56dp"
+        android:text="Add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ID_EDITPHONE" />
+</androidx.constraintlayout.widget.ConstraintLayout>

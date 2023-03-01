@@ -2,6 +2,9 @@ package com.example.myapplication;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.media.Image;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +20,6 @@ import java.util.ArrayList;
 public class Adapter extends BaseAdapter {
     //Nguồn dữ liệu cho adapter
     private ArrayList<Contact> data;
-    private ArrayList<Contact> databackup;
     //Ngữ cảnh ứng dụng
     private Activity context;
     //Đối tượng phân tích layout
@@ -99,6 +101,26 @@ public class Adapter extends BaseAdapter {
                 }
             }
         });
+        //Sự kiện điện thoại
+        ImageView imgphone = v.findViewById(R.id.ID_IMGPHONE);
+        imgphone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentCall = new Intent(Intent.ACTION_DIAL, Uri.parse("tel: " + data.get(i).getPhone()));
+                context.startActivity(intentCall);
+            }
+        });
+
+        //Sự kiện SMS
+        ImageView imgsms = v.findViewById(R.id.ID_IMGSMS);
+        imgsms.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentSMS = new Intent(Intent.ACTION_VIEW, Uri.parse("smsto: " + data.get(i).getPhone()));
+                context.startActivity(intentSMS);
+            }
+        });
+
         return v;
     }
 }
